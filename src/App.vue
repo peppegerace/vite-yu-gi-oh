@@ -13,9 +13,6 @@ export default {
 
 
 <template>
-  <div>
-    <h1>Yu-Gi-Oh</h1>
-  </div>
 
   <Header />
   <Main />
@@ -23,6 +20,8 @@ export default {
 </template>
 
 
-<style>
+<style lang="scss">
+
+@use '../scss/main.scss';
 
 </style>

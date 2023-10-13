@@ -1,17 +1,41 @@
 <script>
+import ProductCard from './partials/ProductCard.vue';
+
+
 export default {
-  name: 'Main'
+  name: 'Main',
+  components: {
+    ProductCard
+  }
 }
 </script>
 
 
 <template>
-  <div>
-    <h1>Main</h1>
+ 
+ <main>
+
+  <div class="container">
+
+    <select name="" id="">
+
+    </select>
+
+    <div class="cards">
+      
+    </div>
+
   </div>
+ </main>
 </template>
 
 
-<style>
+<style lang="scss">
+
+@use '../scss/main.scss' as *;
+
+main {
+  background-color: $primarycolor;
+}
 
 </style>
