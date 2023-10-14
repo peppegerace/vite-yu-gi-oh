@@ -6,7 +6,7 @@ export default {
 
 
 <template>
-  <header>
+  <header class="d-flex align-items-center">
     
     <img src="/logo_yu-gi-oh.webp" alt="">
     <h1>Yu-Gi-Oh API</h1>
@@ -20,10 +20,10 @@ export default {
 @use '../scss/main.scss' as *;
 
 header {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   width: 100%;
-  height: 40px;
+  height: 60px;
 
   img {
     width: 50px;

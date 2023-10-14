@@ -20,7 +20,8 @@ export default {
     getApi() {
       axios.get(store.apiUrl)
         .then(res => {
-          console.log(res.data);
+          console.log(res.data.data);
+          store.cardResults = res.data.data
         })
         .catch(err =>{
 

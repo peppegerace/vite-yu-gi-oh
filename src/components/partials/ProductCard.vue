@@ -1,6 +1,18 @@
 <script>
+import { store } from '../../data/store';
+
 export default {
-  name: 'ProductCard'
+  name: 'ProductCard',
+  props: {
+    name: String,
+    archetype: String,
+    image: String,
+  },
+  // data() {
+  //   return {
+  //     store
+  //   }
+  // }
 }
 </script>
 
@@ -10,11 +22,11 @@ export default {
 <div class="col-auto">
   <div class="cardyugi">
     <div class="image">
-      <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="">
+      <img :src="image" :alt="name">
     </div>
     <div class="description">
-      <h3>nome carta</h3>
-      <span class="archetype">archetipo</span>
+      <h3>{{ name }}</h3>
+      <span class="archetype">{{ archetype }}</span>
     </div>
   </div>
 </div>

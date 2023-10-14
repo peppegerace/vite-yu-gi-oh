@@ -1,11 +1,16 @@
 <script>
 import ProductCard from './partials/ProductCard.vue';
-
+import { store } from '../data/store';
 
 export default {
   name: 'Main',
   components: {
     ProductCard
+  },
+  data() {
+    return {
+      store
+    }
   }
 }
 </script>
@@ -24,14 +29,20 @@ export default {
     <div class="container cards">
       <div class="row mx-auto">
 
+        <ProductCard
+          v-for="card in store.cardResults"
+          :key="card.id"
+          :name="card.name"
+          :archetype="card.archetype"
+          :image="card.card_images[0].image_url" />
+
+        <!-- <ProductCard />
         <ProductCard />
         <ProductCard />
         <ProductCard />
         <ProductCard />
         <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard /> -->
 
       </div>
     </div>
@@ -56,7 +67,7 @@ main {
       width: 230px;
       text-align: center;
       margin-bottom: 15px;
-      border: 1px solid black;
+      flex-grow: 1;
       .image {
         width: 100%;
       }
